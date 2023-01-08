@@ -14,7 +14,7 @@ names1=['John', 'Paul']
 # names.pop()
 # popped = names.pop()
 # print(popped)
-print(names)
+# print(names)
 
 # Reverse
 # names1.reverse()
@@ -57,3 +57,18 @@ print(names)
 # new_list = names_str.split(',')
 # print(names_str)
 # print(new_list)
+
+"""
+## List iterables Vs Iterators
+"""
+lst=[1,2,3]
+
+# for i in lst:
+#     print(i)
+
+lst1=iter(lst)
+
+next(lst1)
+
+for i in lst1:
+    print(i)
