@@ -1,14 +1,35 @@
-Set1 = {'Physics', 'Chemistry', 'Math', 'Computers', 'Physics'}
+fruits = {"apple", "banana", "orange"}
+#print(fruits)
 
+fruits = {"apple", "banana", "orange", "apple"}
+#print(fruits)
 
-print(Set1)  # order not maintained and no duplicates
+numbers = set([1, 2, 3, 4, 5])
+#print(numbers)
 
-print('Chemistry'  in Set1)
+set1 = {1, 2, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
 
-Set2 = {'Commerce', 'Economics', 'Math'}
+# Union
+union_set = set1.union(set2)
+#print(union_set)
+# Output: {1, 2, 3, 4, 5, 6, 7, 8}
 
-print(Set1.intersection(Set2))
+# Intersection
+intersection_set = set1.intersection(set2)
+#print(intersection_set)
+# Output: {4, 5}
 
-print(Set1.difference(Set2))
+# Difference
+difference_set1 = set1.difference(set2)
+#print(difference_set1)
+# Output: {1, 2, 3}
 
-print(Set1.union(Set2))
+# Difference
+difference_set2 = set2.difference(set1)
+#print(difference_set2)
+
+# Check if a set is a subset of another set
+subset_check = {1, 2}.issubset(set1)
+print(subset_check)
+# Output: True
