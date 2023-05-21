@@ -33,7 +33,17 @@ del student["major"]
     #print(key, student[key])
 
 
+# Adding and Accessing Lists inside the Dictionary
+country = {
+    "US": ["Dallas", "Colorado", "Los Angeles"],
+    "UK": ["London", "Manchester", "Liverpool"],
+    "Germany": ["Berlin", "Munich", "Frankfurt"]
+}
 
+print(country["UK"])
+print(country["UK"][0])
+print(country["US"][1])
+print(country['Germany'][2])
 
 
 
