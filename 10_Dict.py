@@ -1,31 +1,56 @@
-stu_dict = {'name': 'John', 'age': 25, 'courses': ['Math', 'Science']}
+student = {
+    "name": "John",
+    "age": 20,
+    "major": "Computer Science"
+}
+#print(student)
+#print(student["name"])
+# Output: John
 
-print(stu_dict)
-print(stu_dict['name'])
-print(stu_dict.get('phone'))
-print(stu_dict.get('phone', 'Not Found'))
+#print(student["age"])
+# Output: 20
 
-stu_dict['phone'] = '11 111 111'
-print(stu_dict.get('phone', 'Not Found'))
+student["age"] = 21  # Modify the value of an existing key
+student["year"] = 3  # Add a new key-value pair
+#print(student)
 
-stu_dict['phone'] = '22 111 111' # update the existing value of the existing key
+del student["major"]
+#print(student)
 
-print(stu_dict.get('phone', 'Not Found'))
 
-stu_dict.update({'name': 'Doe', 'age': 28})
-print(stu_dict)
+#print("name" in student)
+# Output: True
 
-# del stu_dict['age']
-# print(stu_dict)
-#
-# name = stu_dict.pop('name')
-# print(name)
-# print(stu_dict)
+#print(student.keys())
+# Output: dict_keys(['name', 'age', 'year'])
 
-print(len(stu_dict))
-print(stu_dict.keys())
-print(stu_dict.values())
-print(stu_dict.items())
+#print(student.values())
+# Output: dict_values(['John', 21, 3])
 
-for key, value in stu_dict.items():
-    print(key, value)
+#print(student.items())
+
+#for key in student:
+    #print(key, student[key])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
