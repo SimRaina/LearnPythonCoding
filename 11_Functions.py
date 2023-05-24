@@ -1,48 +1,48 @@
-# DRY -> Do Not Repeat Yourself
-def func():
-    pass
+#1. Defining the function
+
+def greet():
+    print("Hello, world!")
+
+# To call this function to execute
+greet()
+
+#2. Function with arguments
+def greet(name):
+    print(name)
+
+#call
+greet('Sim')
+
+#3. Return value
+def add_numbers(a, b):
+    return a + b
+
+#call
+print(add_numbers(1,2))
+
+#4. Default argument
+def greet(name="world"):
+    print("Hello, " + name)
+
+#call
+greet() #no argument passed
+
+#5. Any number of argument 
+def add_numbers(*args):
+    total = 0
+    for num in args:
+        total += num
+    return total
+
+print(add_numbers())
+
+def print_info(**kwargs):
+    for key, value in kwargs.items():
+        print(key + ": " + str(value))
+
+#call
+print_info(name='Sim', dept='QA')
 
 
-print(func())
-
-def func1():
-    print("Hello 1")
-
-func1()
 
 
-def func2():
-    return 'Hello 2'
-
-print(func2().upper())
-
-def func3(name):
-    return 'Welcome {} !'.format(name)
-
-print(func3('SimRaina'))
-
-
-def func4(name, greeting='Hello'):
-    return '{}, {} !'.format(greeting, name)
-
-print(func4('SimRaina'))
-
-def func5(name, greeting='Hello'):
-    return '{}, {} !'.format(greeting, name)
-
-print(func4('SimRaina', 'Welcome'))
-
-def emp_info(*args, **kwargs):
-    print(args)
-    print(kwargs)
-
-emp_info('QA', 'IT', name='Sim', age='32')
-
-def emp_info1(*args, **kwargs):
-    print(args)
-    print(kwargs)
-
-dept_info = ['QA', 'IT']
-info = {'name': 'Sim', 'age': 32}
-
-emp_info1(*dept_info, **info)
